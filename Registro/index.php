@@ -49,6 +49,7 @@
                 //si la sentencia se ejecuta correctamente mostramos ok si no pues no
                 if ($conexion->query($sql) == "TRUE") {
                     header("location: ../index.php");
+                    exit;
                 } else {
                     echo "<p>Error al insertar</p>";
                 }
