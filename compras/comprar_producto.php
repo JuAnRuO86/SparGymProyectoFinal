@@ -61,7 +61,7 @@
 
     <div class="container" >
         <h1>Comprar producto</h1>
-        <a class="btn btn-warning" href="../Inicio/index.php">Listado de compras</a>
+        <a class="btn btn-warning" href="../index.php">Listado de compras</a>
         <a class="btn btn-secondary" href="../Inicio/index.php">Inicio</a>
         <a class="btn btn-warning" href="./usuario_compras.php">Mis compras</a><br><br>
 

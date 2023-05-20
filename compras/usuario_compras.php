@@ -11,7 +11,15 @@
 <body style="color:white;">
     <?php require '../resources/header.php' ?>
     <?php require '../resources/util/databases.php' ?>
-    <?php $usuario = $_SESSION["usuario"]; ?>
+    
+    <?php 
+    if(!empty($_GET["usuario"])){
+        $usuario = $_GET["usuario"];
+    }else{
+        $usuario = $_SESSION["usuario"];
+    }
+    
+    ?>
 
     <?php
         

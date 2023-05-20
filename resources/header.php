@@ -1,7 +1,7 @@
 <?php
 //recuperamos la sesion
 session_start();
-//redcohemos el rol del usuario
+//recojemos el rol del usuario
 $rol = $_SESSION["rol"];
 
 if ($rol == "administrador") {
@@ -26,7 +26,7 @@ if ($rol == "administrador") {
                                 <a class="nav-link active" aria-current="page" href="http://localhost/SPARGYMProyFinal/SparGymProyectoFinal/usuarios">Usuarios</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="http://localhost/SPARGYMProyFinal/SparGymProyectoFinal/usuarios">Listado de compras</a>
+                                <a class="nav-link active" aria-current="page" href="http://localhost/SPARGYMProyFinal/SparGymProyectoFinal/compras/index.php">Listado de compras</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link active" href="http://localhost/SPARGYMProyFinal/SparGymProyectoFinal/compras/comprar_producto.php">Comprar</a>
