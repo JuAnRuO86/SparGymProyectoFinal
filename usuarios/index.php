@@ -19,7 +19,7 @@
         <div class="row">
             <div class="col-9">
                 <a class="btn btn-warning" href="../producto/index.php">Productos</a> 
-                <a class="btn btn-secondary" href="../index.php">Inicio</a> 
+                <a class="btn btn-secondary" href="../Inicio/index.php">Inicio</a> 
                 <a class="btn btn-warning" href="../compras/index.php">Listado de compras</a> <br><br>
 
                 <br>
