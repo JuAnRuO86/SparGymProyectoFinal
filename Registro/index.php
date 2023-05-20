@@ -21,47 +21,8 @@
 </head>
 
 <body>
-    <?php
-    require '../resources/util/databases.php';
-
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $nombre = $_POST["name"];
-        $primer_apellido = $_POST["primer_apellido"];
-        $segundo_apellido = $_POST["segundo_apellido"];
-        $fecha_nacimiento = $_POST["fecha_nacimiento"];
-        $usuario = $_POST["username"];
-        $contrasena = $_POST["contrasena"];
-        $contrasenaConfirm = $_POST["confirm"];
-        $rol = $_POST["rol"];
-        // if(empty($rol)){
-        //     $rol = 'usuario';
-        // }else{
-        //     $rol = 'administrador';
-        // }
-        $hash_contrasena = password_hash($contrasena, PASSWORD_DEFAULT);
-
-        if (!empty($nombre) && !empty($usuario) && !empty($contrasena) && !empty($contrasenaConfirm)) {
-            //creamos la sentencia SQL
-            if ($contrasena == $contrasenaConfirm) {
-                $sql = "INSERT INTO usuarios (contrasena, usuario, nombre, primer_apellido, segundo_apellido, fecha_nacimiento, rol)
-                VALUES('$hash_contrasena', '$usuario','$nombre','$primer_apellido','$segundo_apellido','$fecha_nacimiento', '$rol')";
-
-                //si la sentencia se ejecuta correctamente mostramos ok si no pues no
-                if ($conexion->query($sql) == "TRUE") {
-                    header("location: ../index.php");
-                    exit;
-                } else {
-                    echo "<p>Error al insertar</p>";
-                }
-            } else {
-                echo "<p>No coinciden las constrasenas</p>";
-            }
-        }
-    }
-    ?>
-
-
-    <div class="container">
+    
+<div class="container">
     <h2 id="spargymLogin">🔱SPARGYM🔱</h2>
 
         <div class="row main">
@@ -159,6 +120,46 @@
             </div>
         </div>
     </div>
+
+    <?php
+    require '../resources/util/databases.php';
+
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $nombre = $_POST["name"];
+        $primer_apellido = $_POST["primer_apellido"];
+        $segundo_apellido = $_POST["segundo_apellido"];
+        $fecha_nacimiento = $_POST["fecha_nacimiento"];
+        $usuario = $_POST["username"];
+        $contrasena = $_POST["contrasena"];
+        $contrasenaConfirm = $_POST["confirm"];
+        $rol = $_POST["rol"];
+        // if(empty($rol)){
+        //     $rol = 'usuario';
+        // }else{
+        //     $rol = 'administrador';
+        // }
+        $hash_contrasena = password_hash($contrasena, PASSWORD_DEFAULT);
+
+        if (!empty($nombre) && !empty($usuario) && !empty($contrasena) && !empty($contrasenaConfirm)) {
+            //creamos la sentencia SQL
+            if ($contrasena == $contrasenaConfirm) {
+                $sql = "INSERT INTO usuarios (contrasena, usuario, nombre, primer_apellido, segundo_apellido, fecha_nacimiento, rol)
+                VALUES('$hash_contrasena', '$usuario','$nombre','$primer_apellido','$segundo_apellido','$fecha_nacimiento', '$rol')";
+
+                //si la sentencia se ejecuta correctamente mostramos ok si no pues no
+                if ($conexion->query($sql) == "TRUE") {
+                    header("location: ../index.php");
+                    exit;
+                } else {
+                    echo "<p>Error al insertar</p>";
+                }
+            } else {
+                echo "<p>No coinciden las contraseñas</p>";
+            }
+        }
+    }
+    ?>
+
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
