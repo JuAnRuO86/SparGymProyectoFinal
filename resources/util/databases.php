@@ -1,8 +1,8 @@
 <?php
-    $servidor = 'localhost';
-    $usuario = 'Ruiz';
-    $contrasena = 'Ruiz';
-    $base_de_datos = 'db_spargym';
+    $servidor = 'containers-us-west-141.railway.app';
+    $usuario = 'root';
+    $contrasena = 'Syhksl3FPwKjLcuaOUER';
+    $base_de_datos = 'railway';
 
 
     
