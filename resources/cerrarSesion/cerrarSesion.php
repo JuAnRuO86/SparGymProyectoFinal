@@ -4,5 +4,5 @@
     //destruimos la sesion y todos los datos que llevas
     session_destroy();
     //Redirigimos al login
-    header("location: ../../index.php");
+    header("location: https://spargymproyectofinal-production.up.railway.app/");
 ?>
