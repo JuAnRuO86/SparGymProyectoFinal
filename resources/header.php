@@ -33,11 +33,11 @@ if ($rol == "administrador") {
                             </li>
                         </ul>
                     </div>
-                    <a href="./cerrarSesion/cerrarSesion.php"><img src="../resources/img/logout.png" style="width: 30px;"></a>
+                    <a href="https://spargymproyectofinal-production.up.railway.app/resources/cerrarSesion/cerrarSesion.php"><img src="../resources/img/logout.png" style="width: 30px;"></a>
                     <?php
                     //comprobamos si hay sesion
                     if (!isset($_SESSION["usuario"])) { // si no hay sesion nos redirige todo el rato al login
-                        header("location: ../index.php");
+                        header("location: https://spargymproyectofinal-production.up.railway.app/index.php");
                     } else {
                         echo "<a>" . $_SESSION["usuario"] . "</a>"; // si hay sesion pues mostramos el echo en la pagina destino 
                     }
@@ -70,11 +70,11 @@ if ($rol == "administrador") {
                             </li>
                         </ul>
                     </div>
-                    <a href="./cerrarSesion/cerrarSesion.php"><img src="../resources//img/logout.png" style="width: 30px;"></a>
+                    <a href="https://spargymproyectofinal-production.up.railway.app/resources/cerrarSesion/cerrarSesion.php"><img src="../resources/img/logout.png" style="width: 30px;"></a>
                     <?php
                     //comprobamos si hay sesion
                     if (!isset($_SESSION["usuario"])) { // si no hay sesion nos redirige todo el rato al login
-                        header("location: ../index.php");
+                        header("location: https://spargymproyectofinal-production.up.railway.app/index.php");
                     } else {
                         echo "<a>" . $_SESSION["usuario"] . "</a>"; // si hay sesion pues mostramos el echo en la pagina destino 
                     }

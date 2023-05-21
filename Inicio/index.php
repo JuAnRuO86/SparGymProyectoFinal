@@ -64,7 +64,7 @@
                                 En este apartado podrás ver, añadir nuevos productos y eliminar productos de la lista.
                                 
                             </p>
-                            <a href="http://localhost/SPARGYMProyFinal/SparGymProyectoFinal/compras/comprar_producto.php" class="btn btn-outline-info">Ir</a>
+                            <a href="../compras/comprar_producto.php" class="btn btn-outline-info">Ir</a>
                         </div>
                     </div>
                 </div>
@@ -78,7 +78,7 @@
                                 En este apartado podrás ver los usuarios registrados.<hr>
                                 Podrás eliminar a los usuarios y ver su información.              
                             </p>
-                            <a href="http://localhost/SPARGYMProyFinal/SparGymProyectoFinal/usuarios/index.php" class="btn btn-outline-info">Ir</a>
+                            <a href="../usuarios/index.php" class="btn btn-outline-info">Ir</a>
                         </div>
                     </div>
                 </div>
@@ -92,7 +92,7 @@
                                 En este apartado podrás un listado de las compras realizadas por los distintos usuarios.<hr>
                                 Podrás acceder a las compras individuales de cada usuario.
                             </p>
-                            <a href="http://localhost/SPARGYMProyFinal/SparGymProyectoFinal/compras/usuario_compras.php" class="btn btn-outline-info">Ir</a>
+                            <a href="../compras/usuario_compras.php" class="btn btn-outline-info">Ir</a>
                         </div>
                     </div>
                 </div>
@@ -109,7 +109,7 @@
                                 En este apartado podrás ver los productos a la venta.<hr>
                                 Podrás comprar cuanto desees.
                             </p>
-                            <a href="http://localhost/SPARGYMProyFinal/SparGymProyectoFinal/compras/comprar_producto.php" class="btn btn-outline-info">Ir</a>
+                            <a href="../compras/comprar_producto.php" class="btn btn-outline-info">Ir</a>
                         </div>
                     </div>
                 </div>
@@ -122,7 +122,7 @@
                                 En este apartado podrás ver los productos que tienes en el carrito.<hr>
                                 Podrás eliminar si algo no te convence.
                             </p>
-                            <a href="http://localhost/SPARGYMProyFinal/SparGymProyectoFinal/compras/usuario_compras.php" class="btn btn-outline-info">Ir</a>
+                            <a href="../compras/usuario_compras.php" class="btn btn-outline-info">Ir</a>
                         </div>
                     </div>
                 </div>
