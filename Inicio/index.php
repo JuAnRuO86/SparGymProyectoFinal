@@ -1,3 +1,4 @@
+<?php require '../resources/header.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,10 +13,7 @@
 </head>
 
 <body>
-    <!-- añadimos la barra de navegacion -->
-    <?php
-    require '../resources/header.php';
-    ?>
+    
     <hr><div>
         <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false" style="display: flex; justify-content: center; min-height: 55vh;">
             <div class="carousel-indicators">
