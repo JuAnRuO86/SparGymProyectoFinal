@@ -14,16 +14,16 @@ if ($rol == "administrador") {
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="https://spargymproyectofinal-production.up.railway.app/Inicio">Inicio</a>
+                                <a class="nav-link active" aria-current="page" href="https://spargymproyectofinal-production.up.railway.app/Inicio/index.php">Inicio</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="https://spargymproyectofinal-production.up.railway.app/producto">Productos</a>
+                                <a class="nav-link active" aria-current="page" href="https://spargymproyectofinal-production.up.railway.app/producto/.index.php">Productos</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="https://spargymproyectofinal-production.up.railway.app/usuarios">Usuarios</a>
+                                <a class="nav-link active" aria-current="page" href="https://spargymproyectofinal-production.up.railway.app/usuarios/.index.php">Usuarios</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="https://spargymproyectofinal-production.up.railway.app/compras">Listado de compras</a>
+                                <a class="nav-link active" aria-current="page" href="https://spargymproyectofinal-production.up.railway.app/compras/.index.php">Listado de compras</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link active" href="https://spargymproyectofinal-production.up.railway.app/compras/comprar_producto.php">Comprar</a>
@@ -60,7 +60,7 @@ if ($rol == "administrador") {
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="https://spargymproyectofinal-production.up.railway.app/Inicio">Inicio</a>
+                                <a class="nav-link active" aria-current="page" href="https://spargymproyectofinal-production.up.railway.app/Inicio/index.php">Inicio</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link active" href="https://spargymproyectofinal-production.up.railway.app/compras/comprar_producto.php">Comprar</a>
