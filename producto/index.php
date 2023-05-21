@@ -1,3 +1,5 @@
+<?php require '../resources/header.php' ?>
+<?php require '../resources/util/databases.php' ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,26 +7,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="../Inicio/inicio.css" />
+    <link rel="stylesheet" type="text/css" href=".https://spargymproyectofinal-production.up.railway.app/Inicio/inicio.css" />
     <title>Index</title>
 </head>
 <body style="color:white;">
-    <?php require '../resources/header.php' ?>
-    <?php require '../resources/util/databases.php' ?>
     <div class="container">
-
         <br>
         <h1>Listado de productos</h1>
-
         <div class="row">
             <div class="col-9">
-        
-                <a class="btn btn-secondary" href="../Inicio/index.php">Inicio</a>
-                <a class="btn btn-warning" href="../usuarios/index.php">Usuarios</a>
-
-              
-                <!-- <a class="btn btn-primary" href="insertar_producto.php">Nuevo producto</a>   DUDAS DE USAR -->
-                
+                <a class="btn btn-secondary" href=".https://spargymproyectofinal-production.up.railway.app/Inicio/index.php">Inicio</a>
+                <a class="btn btn-warning" href=".https://spargymproyectofinal-production.up.railway.app/usuarios/index.php">Usuarios</a>
                 <br><br>
                 <table class="table" style="color:white;">
                     <thead class="table-secondary">
@@ -41,9 +34,7 @@
                         <?php //Borrar producto
                         if($_SERVER["REQUEST_METHOD"] == "POST"){
                             $id = $_POST["id"];
-                            
                             $sql = "DELETE FROM producto WHERE id = '$id'";
-
                             if($conexion -> query($sql)){
                             ?>
                             <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -60,15 +51,10 @@
                                 <?php
                             }
                         }   
-                        ?>
-                        
-
-
-    
+                        ?>    
                         <?php
                             $sql = "SELECT * FROM producto";
                             $resultado = $conexion -> query($sql);
-
                             if ($resultado -> num_rows > 0) {
                                 while ($fila = $resultado -> fetch_assoc()) {
                                     $nombre = $fila["nombre"];
@@ -103,7 +89,6 @@
             </div>
         </div>
     </div>
-    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 </body>
 </html>
