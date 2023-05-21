@@ -14,26 +14,26 @@ if ($rol == "administrador") {
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="../Inicio">Inicio</a>
+                                <a class="nav-link active" aria-current="page" href="https://spargymproyectofinal-production.up.railway.app/Inicio">Inicio</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="../producto">Productos</a>
+                                <a class="nav-link active" aria-current="page" href="https://spargymproyectofinal-production.up.railway.app/producto">Productos</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="../usuarios">Usuarios</a>
+                                <a class="nav-link active" aria-current="page" href="https://spargymproyectofinal-production.up.railway.app/usuarios">Usuarios</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="../compras">Listado de compras</a>
+                                <a class="nav-link active" aria-current="page" href="https://spargymproyectofinal-production.up.railway.app/compras">Listado de compras</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active" href="../compras/comprar_producto.php">Comprar</a>
+                                <a class="nav-link active" href="https://spargymproyectofinal-production.up.railway.app/compras/comprar_producto.php">Comprar</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active" href="../compras/usuario_compras.php">Mis compras</a>
+                                <a class="nav-link active" href="https://spargymproyectofinal-production.up.railway.app/compras/usuario_compras.php">Mis compras</a>
                             </li>
                         </ul>
                     </div>
-                    <a href="https://spargymproyectofinal-production.up.railway.app/resources/cerrarSesion/cerrarSesion.php"><img src="../resources/img/logout.png" style="width: 30px;"></a>
+                    <a href="https://spargymproyectofinal-production.up.railway.app/resources/cerrarSesion/cerrarSesion.php"><img src="https://spargymproyectofinal-production.up.railway.app/resources/img/logout.png" style="width: 30px;"></a>
                     <?php
                     //comprobamos si hay sesion
                     if (!isset($_SESSION["usuario"])) { // si no hay sesion nos redirige todo el rato al login
@@ -60,17 +60,17 @@ if ($rol == "administrador") {
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="../Inicio">Inicio</a>
+                                <a class="nav-link active" aria-current="page" href="https://spargymproyectofinal-production.up.railway.app/Inicio">Inicio</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active" href="../compras/comprar_producto.php">Comprar</a>
+                                <a class="nav-link active" href="https://spargymproyectofinal-production.up.railway.app/compras/comprar_producto.php">Comprar</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active" href="../compras/usuario_compras.php">Mis compras</a>
+                                <a class="nav-link active" href="https://spargymproyectofinal-production.up.railway.app/compras/usuario_compras.php">Mis compras</a>
                             </li>
                         </ul>
                     </div>
-                    <a href="https://spargymproyectofinal-production.up.railway.app/resources/cerrarSesion/cerrarSesion.php"><img src="../resources/img/logout.png" style="width: 30px;"></a>
+                    <a href="https://spargymproyectofinal-production.up.railway.app/resources/cerrarSesion/cerrarSesion.php"><img src="https://spargymproyectofinal-production.up.railway.app/resources/img/logout.png" style="width: 30px;"></a>
                     <?php
                     //comprobamos si hay sesion
                     if (!isset($_SESSION["usuario"])) { // si no hay sesion nos redirige todo el rato al login
