@@ -2,10 +2,8 @@
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!------ Include the above in your HEAD tag ---------->
-
 <!DOCTYPE html>
 <html>
-
 <head>
     <title>Inicio de Sesion</title>
     <meta http-equiv=”Expires” content=”0″>
@@ -14,10 +12,8 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
 </head>
-<!--Coded with love by Mutiullah Samim-->
 <?php
 require './resources/util/databases.php';
-
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $usuario = $_POST["usuario"];
     $contrasena = $_POST["contrasena"];
@@ -34,7 +30,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $rol = $row["rol"];
             }
             $acceso_valido = password_verify($contrasena, $hash_contrasena);
-
             if ($acceso_valido == TRUE) {
                 //creamos la sesion y mandamos el usuarios
                 session_start();
@@ -48,7 +43,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 ?>
-
 <body>
     <div class="container h-100">
         <h2 id="spargymLogin">🔱SPARGYM🔱</h2>
@@ -84,7 +78,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         </div>
                     </form>
                 </div>
-
                 <div class="mt-4">
                     <div class="d-flex justify-content-center links">
                         ¡Regístrate ya! <a href="./Registro/index.php" class="ml-2">Registrar</a>
@@ -94,5 +87,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
     </div>
 </body>
-
 </html>

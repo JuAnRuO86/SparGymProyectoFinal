@@ -1,9 +1,6 @@
 <?php
-//recuperamos la sesion
 session_start();
-//recojemos el rol del usuario
 $rol = $_SESSION["rol"];
-
 if ($rol == "administrador") {
 ?>
     <div style="background-color:rgba(90, 19, 19);">
@@ -34,12 +31,10 @@ if ($rol == "administrador") {
                             <li class="nav-item">
                                 <a class="nav-link active" href="../compras/usuario_compras.php">Mis compras</a>
                             </li>
-                            
                         </ul>
                     </div>
                     <a href="./cerrarSesion/cerrarSesion.php"><img src="../resources/img/logout.png" style="width: 30px;"></a>
                     <?php
-
                     //comprobamos si hay sesion
                     if (!isset($_SESSION["usuario"])) { // si no hay sesion nos redirige todo el rato al login
                         header("location: ../index.php");
@@ -54,7 +49,6 @@ if ($rol == "administrador") {
 <?php
 } else {
 ?>
-
     <div style="background-color:rgba(90, 19, 19);">
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-dark">
@@ -78,7 +72,6 @@ if ($rol == "administrador") {
                     </div>
                     <a href="./cerrarSesion/cerrarSesion.php"><img src="../resources//img/logout.png" style="width: 30px;"></a>
                     <?php
-
                     //comprobamos si hay sesion
                     if (!isset($_SESSION["usuario"])) { // si no hay sesion nos redirige todo el rato al login
                         header("location: ../index.php");
