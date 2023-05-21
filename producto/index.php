@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href=".https://spargymproyectofinal-production.up.railway.app/Inicio/inicio.css" />
+    <link rel="stylesheet" type="text/css" href="https://spargymproyectofinal-production.up.railway.app/Inicio/inicio.css" />
     <title>Index</title>
 </head>
 <body style="color:white;">
@@ -16,8 +16,8 @@
         <h1>Listado de productos</h1>
         <div class="row">
             <div class="col-9">
-                <a class="btn btn-secondary" href=".https://spargymproyectofinal-production.up.railway.app/Inicio/index.php">Inicio</a>
-                <a class="btn btn-warning" href=".https://spargymproyectofinal-production.up.railway.app/usuarios/index.php">Usuarios</a>
+                <a class="btn btn-secondary" href="https://spargymproyectofinal-production.up.railway.app/Inicio/index.php">Inicio</a>
+                <a class="btn btn-warning" href="https://spargymproyectofinal-production.up.railway.app/usuarios/index.php">Usuarios</a>
                 <br><br>
                 <table class="table" style="color:white;">
                     <thead class="table-secondary">
