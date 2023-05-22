@@ -71,7 +71,7 @@
             </div>
         <?php
         }
-        header("Location: ./index.php");
+        header("Location: ../producto/index.php");
         exit;
         }
     }
