@@ -1,8 +1,9 @@
-<?php
+<?php require '../resources/header.php' ?>
+<?php require '../resources/util/databases.php' ?>
 
+<?php
     if ($_SERVER["REQUEST_METHOD"] == "GET") {
         $id = $_GET["id"];
-
         $sql = "SELECT * FROM producto where id=$id";
         $resultado = $conexion->query($sql);
         if ($resultado->num_rows > 0) {
@@ -15,7 +16,6 @@
             }
         }
     }
-
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (empty($_POST["nombre"])) {
             ?>
@@ -24,14 +24,12 @@
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" onclick="window.location.href = 'index.php';"></button>
             </div>
             <?php
-
             echo '<script>
                 setTimeout(function() {
                     document.getElementById("mensaje").style.display = "none"; // Oculta el mensaje después de 3 segundos
                     window.location.href = "index.php"; // Redirecciona a otra página
                 }, 3000); // Tiempo en milisegundos
             </script>';
-            
             exit;
         }
         elseif (empty($_POST["precio"]) || !is_numeric($_POST["precio"])) {
@@ -41,32 +39,26 @@
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" onclick="window.location.href = 'index.php';"></button>
             </div>
             <?php
-
             echo '<script>
             setTimeout(function() {
                 document.getElementById("mensaje").style.display = "none"; // Oculta el mensaje después de 3 segundos
                 window.location.href = "index.php"; // Redirecciona a otra página
             }, 3000); // Tiempo en milisegundos
             </script>';
-
             exit;
         }else{
             $id2 = $_POST["id"];
-
             $sql2 = "SELECT imagen FROM producto where id=$id2";
             $resultado2 = $conexion->query($sql2);
-
             $nombre2 = $_POST["nombre"];
             $precio2 = $_POST["precio"];
             $imagen2 = $_POST["imagen"];
             $categoria2 = $_POST["categoria"];
-
             $sql3 = "UPDATE producto SET nombre = '$nombre2',
                                     precio = '$precio2',
                                     imagen = '$imagen2',
                                     categoria = '$categoria2'
                                  WHERE id = $id2";
-
         if ($conexion->query($sql3) == "TRUE") {
             $nombre = $_POST["nombre"];
             $precio = $_POST["precio"];
@@ -83,15 +75,10 @@
         exit;
         }
     }
-    
     ?>
-
-<?php require '../resources/header.php' ?>
-<?php require '../resources/util/databases.php' ?>
 <!-- MUESTRA Y EDITA LOS PRODUCTOS -->
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -101,9 +88,7 @@
     <link rel="stylesheet" href="https://spargymproyectofinal-production.up.railway.app/resources/bootstrap.min.css">
     <link rel="stylesheet" href="https://spargymproyectofinal-production.up.railway.app/Inicio/inicio.css">
 </head>
-
 <body style="width=100vw; height:100vh;">
-       
     <div class="container">
         <div class="row mt-5 ">
             <div class="col-4">
@@ -128,7 +113,6 @@
                 </div>
                 </p>
             </div>
-
             <div class="collapse col-8" id="form">
                 <form action="" method="POST" enctype="multipart/form-data">
                     <label class="form-label">Nombre</label>
@@ -153,11 +137,6 @@
             </div>
         </div>
     </div>
-
-    
-
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>
