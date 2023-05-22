@@ -1,5 +1,5 @@
-<?php require 'https://spargymproyectofinal-production.up.railway.app/resources/header.php' ?>
-<?php require 'https://spargymproyectofinal-production.up.railway.app/resources/util/databases.php' ?>
+<?php require '../resources/header.php' ?>
+<?php require '../resources/util/databases.php' ?>
 <!-- MUESTRA Y EDITA LOS PRODUCTOS -->
 <!DOCTYPE html>
 <html lang="en">
