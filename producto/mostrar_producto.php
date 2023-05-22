@@ -98,7 +98,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <script>
         setTimeout(function() {
             redirectToIndex(); // Redirecciona a otra página después de 3 segundos
-        }, 3000); // Tiempo en milisegundos
+        }, 0001); // Tiempo en milisegundos
         
         function redirectToIndex() {
             window.location.href = "index.php";
