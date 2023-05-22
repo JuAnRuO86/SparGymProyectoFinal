@@ -1,3 +1,5 @@
+<?php require '../resources/header.php' ?>
+<?php require '../resources/util/databases.php' ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,8 +11,7 @@
     <title>Index</title>
 </head>
 <body style="color:white;">
-    <?php require '../resources/header.php' ?>
-    <?php require '../resources/util/databases.php' ?>
+    
     <div class="container">
       
         <br>
@@ -53,7 +54,12 @@
                             </div>
                             <?php
                             }else{
-                                echo "<p>Error al borrar</p>";
+                                ?>
+                                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                    Error al borrar usuario
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                </div>
+                                <?php
                             }
                         }   
                         ?>
