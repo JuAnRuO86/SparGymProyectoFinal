@@ -1,3 +1,5 @@
+<?php require '../resources/header.php' ?>
+<?php require '../resources/util/databases.php' ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,21 +10,15 @@
     <link rel="stylesheet" type="text/css" href="../Inicio/inicio.css" />
     <title>Document</title>
 </head>
-<body style="color:white;">
-    <?php require '../resources/header.php' ?>
-    <?php require '../resources/util/databases.php' ?>
-    
+<body style="color:white;">    
     <?php 
     if(!empty($_GET["usuario"])){
         $usuario = $_GET["usuario"];
     }else{
         $usuario = $_SESSION["usuario"];
     }
-    
     ?>
-
-    <?php
-        
+    <?php  
         if(isset($_POST['eliminar'])) {
             $usuario_producto_id = $_POST['eliminar'];
             $sql = "DELETE FROM usuarios_productos WHERE id = '$usuario_producto_id'";

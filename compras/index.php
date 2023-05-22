@@ -1,3 +1,5 @@
+<?php require '../resources/header.php' ?>
+<?php require '../resources/util/databases.php' ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,9 +11,6 @@
     <title>Listado de Compras</title>
 </head>
 <body style="color:white;">
-    <?php require '../resources/header.php' ?>
-    <?php require '../resources/util/databases.php' ?>
-
     <div class="container">
     <h1>Listado de compras</h1>
     <a class="btn btn-warning" href="../usuarios/index.php">Usuarios</a>
