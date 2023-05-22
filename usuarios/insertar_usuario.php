@@ -1,3 +1,5 @@
+<?php require '../resources/header.php' ?>
+<?php require '../resources/util/databases.php' ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,8 +11,6 @@
     <title>Nuevo Usuario</title>
 </head>
 <body style="color:white;">
-    <?php require '../resources/header.php' ?>
-        <?php require '../resources/util/databases.php' ?>
     <?php 
         
         if ($_SERVER["REQUEST_METHOD"] == "POST") {

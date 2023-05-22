@@ -1,6 +1,7 @@
+<?php require '../resources/header.php' ?>
+<?php require '../resources/util/databases.php' ?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,12 +11,8 @@
     <link rel="stylesheet" href="../resources/bootstrap.min.css">
     <link rel="stylesheet" href="../Inicio/inicio.css">
 </head>
-
 <body>
-    <?php require '../resources/header.php' ?>
-    <?php require '../resources/util/databases.php' ?>
     <?php
-
     if ($_SERVER["REQUEST_METHOD"] == "GET") {
         $id = $_GET["id"];
 

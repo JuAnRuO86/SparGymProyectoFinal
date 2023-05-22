@@ -37,7 +37,8 @@ if ($rol == "administrador") {
                     <?php
                     //comprobamos si hay sesion
                     if (!isset($_SESSION["usuario"])) { // si no hay sesion nos redirige todo el rato al login
-                        header("location: https://spargymproyectofinal-production.up.railway.app/index.php");
+                        echo '<script>window.location.href = "https://spargymproyectofinal-production.up.railway.app/index.php";</script>';
+                        exit;
                     } else {
                         echo "<a>" . $_SESSION["usuario"] . "</a>"; // si hay sesion pues mostramos el echo en la pagina destino 
                     }
@@ -74,7 +75,8 @@ if ($rol == "administrador") {
                     <?php
                     //comprobamos si hay sesion
                     if (!isset($_SESSION["usuario"])) { // si no hay sesion nos redirige todo el rato al login
-                        header("location: https://spargymproyectofinal-production.up.railway.app/index.php");
+                        echo '<script>window.location.href = "https://spargymproyectofinal-production.up.railway.app/index.php";</script>';
+                        exit;
                     } else {
                         echo "<a>" . $_SESSION["usuario"] . "</a>"; // si hay sesion pues mostramos el echo en la pagina destino 
                     }
