@@ -74,7 +74,7 @@
                     </div>
                     <div class="form-group mb-4">
                         <label class="form-label" style="color:white;">Contraseña</label>
-                        <input class="form-control" type="text" name="contrasena">
+                        <input class="form-control" type="password" name="contrasena">
                     </div>
                     <div class="form-group mb-4">
                         <label class="form-label" style="color:white;">Nombre</label>
