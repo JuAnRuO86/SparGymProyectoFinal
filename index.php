@@ -21,7 +21,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $_SESSION["rol"] = $rol;
                 header("location: ./Inicio/index.php");
             } else {
-                echo "error de pass";
+                ?>
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                Contraseña Incorrecta!
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                <?php
             }
         }
     }
