@@ -34,7 +34,7 @@
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $id2 = $_POST["id"];
 
-        $sql2 = "SELECT imagen FROM usuarios where id=$id2";
+        $sql2 = "SELECT * FROM usuarios where id=$id2";
         $resultado2 = $conexion->query($sql2);
 
         $usuario2 = $_POST["usuario"];
