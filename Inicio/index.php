@@ -61,10 +61,10 @@
                         <div class="card-body">
                             <h5 class="card-title">Productos</h5>
                             <p class="card-text">
-                                En este apartado podrás ver, añadir nuevos productos y eliminar productos de la lista.
+                                En este apartado podrás ver el listado de productos y eliminar productos de la lista.
                                 
                             </p>
-                            <a href="../compras/comprar_producto.php" class="btn btn-outline-info">Ir</a>
+                            <a href="../producto/index.php" class="btn btn-outline-info">Ir</a>
                         </div>
                     </div>
                 </div>
