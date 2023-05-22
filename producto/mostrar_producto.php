@@ -37,32 +37,39 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         ?>
         <div id="mensaje" class="alert alert-danger cess alert-dismissible fade show" role="alert" style="width: 50%; height: 50%; text-align: center; margin: auto; padding-top: 10%; font-size: 23px;">
             <strong>Modificación Errónea!</strong> ¡El nombre no debe estar vacío!
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" onclick="window.location.href = 'index.php';"></button>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" onclick="redirectToIndex();"></button>
         </div>
         <?php
         echo '<script>
             setTimeout(function() {
                 document.getElementById("mensaje").style.display = "none"; // Oculta el mensaje después de 3 segundos
-                window.location.href = "index.php"; // Redirecciona a otra página
+                redirectToIndex(); // Redirecciona a otra página
             }, 3000); // Tiempo en milisegundos
+            
+            function redirectToIndex() {
+                window.location.href = "index.php";
+            }
         </script>';
         exit;
-    }
-    elseif (empty($_POST["precio"]) || !is_numeric($_POST["precio"])) {
+    } elseif (empty($_POST["precio"]) || !is_numeric($_POST["precio"])) {
         ?>
         <div id="mensaje" class="alert alert-danger  cess alert-dismissible fade show" role="alert" style="width: 50%; height: 50%; text-align: center; margin: auto; padding-top: 10%; font-size: 23px;">
-            <strong>Modificación Erronea!</strong><br> ¡El precio debe ser numérico y no debe estar vacío!
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" onclick="window.location.href = 'index.php';"></button>
+            <strong>Modificación Errónea!</strong><br> ¡El precio debe ser numérico y no debe estar vacío!
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" onclick="redirectToIndex();"></button>
         </div>
         <?php
         echo '<script>
         setTimeout(function() {
             document.getElementById("mensaje").style.display = "none"; // Oculta el mensaje después de 3 segundos
-            window.location.href = "index.php"; // Redirecciona a otra página
+            redirectToIndex(); // Redirecciona a otra página
         }, 3000); // Tiempo en milisegundos
+        
+        function redirectToIndex() {
+            window.location.href = "index.php";
+        }
         </script>';
         exit;
-    }else{
+    } else {
         $id2 = $_POST["id"];
         $sql2 = "SELECT imagen FROM producto where id=$id2";
         $resultado2 = $conexion->query($sql2);
@@ -75,22 +82,33 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                 imagen = '$imagen2',
                                 categoria = '$categoria2'
                              WHERE id = $id2";
-    if ($conexion->query($sql3) == "TRUE") {
-        $nombre = $_POST["nombre"];
-        $precio = $_POST["precio"];
-        $imagen = $_POST["imagen"];
-        $categoria = $_POST["categoria"];
-    ?>
-        <div class="alert alert-success alert-dismissible fade show" role="alert">
-            <strong>Producto Modificado!</strong> El producto ha sido modificado con éxito!.
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-        </div>
-    <?php
-    }
-    header("Location: ./index.php");
-    exit;
+        if ($conexion->query($sql3) == "TRUE") {
+            $nombre = $_POST["nombre"];
+            $precio = $_POST["precio"];
+            $imagen = $_POST["imagen"];
+            $categoria = $_POST["categoria"];
+            ?>
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <strong>Producto Modificado!</strong> El producto ha sido modificado con éxito!.
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            <?php
+        }
+        ?>
+        <script>
+        setTimeout(function() {
+            redirectToIndex(); // Redirecciona a otra página después de 3 segundos
+        }, 3000); // Tiempo en milisegundos
+        
+        function redirectToIndex() {
+            window.location.href = "index.php";
+        }
+        </script>
+        <?php
+        exit;
     }
 }
+
 ?>
     <div class="container">
         <div class="row mt-5 ">
