@@ -57,6 +57,7 @@
                             $resultado = $conexion -> query($sql);
                             if ($resultado -> num_rows > 0) {
                                 while ($fila = $resultado -> fetch_assoc()) {
+                                    $id = $fila["id"];
                                     $nombre = $fila["nombre"];
                                     $precio = $fila["precio"];
                                     $categoria = $fila["categoria"];
