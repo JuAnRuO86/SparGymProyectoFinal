@@ -15,6 +15,7 @@
                 $categoria = $row["categoria"];
             }
         }
+        echo "$id";
     }
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (empty($_POST["nombre"])) {
@@ -71,7 +72,7 @@
             </div>
         <?php
         }
-        header("Location: ../producto/index.php");
+        header("Location: ./index.php");
         exit;
         }
     }
