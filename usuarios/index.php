@@ -30,6 +30,7 @@
                     <thead class="table-light">
                         <tr>
                             <th></th>
+                            <th>Rol</th>
                             <th>Usuario </th>
                             <th>Nombre</th>
                             <th>Primer Apellido</th>
@@ -83,6 +84,7 @@
                                     $imagen = "../resources/img/usuarios/usuario.png";
                                     ?>
                                     <tr>
+                                        <td style="color:white; font-weight: bold;"><?php echo $rol ?></td>
                                         <td><img width="50" heigth="70" src=<?php echo $imagen ?>> </td>    
                                         <td style="color:white;"><?php echo $usuario ?></td>
                                         <td style="color:white;"><?php echo $nombre ?></td>

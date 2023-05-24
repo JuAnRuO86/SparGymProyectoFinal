@@ -114,10 +114,7 @@
             </div>
 
             <div class="collapse col-8" id="form">
-                <form action="" method="POST" enctype="multipart/form-data">
-                    <label class="form-label">Rol</label>
-                    <input type="text" class="form-control" name="rol" value="<?php echo$rol ?>">
-                    <br>    
+                <form action="" method="POST" enctype="multipart/form-data">    
                     <label class="form-label">Usuario</label>
                     <input type="text" class="form-control" name="usuario" value="<?php echo$usuario ?>">
                     <br>
