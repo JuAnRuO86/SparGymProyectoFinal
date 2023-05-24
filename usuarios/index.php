@@ -29,8 +29,8 @@
                 <table class="table">
                     <thead class="table-light">
                         <tr>
-                            <th></th>
                             <th>Rol</th>
+                            <th></th>
                             <th>Usuario </th>
                             <th>Nombre</th>
                             <th>Primer Apellido</th>
