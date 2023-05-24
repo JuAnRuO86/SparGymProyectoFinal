@@ -32,43 +32,57 @@
     }
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $id2 = $_POST["id"];
-
-        $sql2 = "SELECT * FROM usuarios where id=$id2";
-        $resultado2 = $conexion->query($sql2);
-
-        $usuario2 = $_POST["usuario"];
-        $nombre2 = $_POST["nombre"];
-        $apellido12 = $_POST["primer_apellido"];
-        $apellido22 = $_POST["segundo_apellido"];
-        $fechaNacimiento2 = $_POST["fecha_nacimiento"];
-
-        $sql3 = "UPDATE usuarios SET  usuario = '$usuario2', 
-                                    nombre = '$nombre2',
-                                    primer_apellido = '$apellido12',
-                                    segundo_apellido = '$apellido22',
-                                    fecha_nacimiento = '$fechaNacimiento2'
-                                 WHERE id = '$id2'";
-
-        if ($conexion->query($sql3) == "TRUE") {
-            $usuario = $_POST["usuario"];
-            $nombre = $_POST["nombre"];
-            $apellido1 = $_POST["primer_apellido"];
-            $apellido2 = $_POST["segundo_apellido"];
-            $fechaNacimiento = $_POST["fecha_nacimiento"];
-    ?>
-            <div class="alert alert-success alert-dismissible fade show" role="alert">
-                <strong>Usuario Modificado!</strong> El usuario ha sido modificada con éxito!.
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        if (strtotime($_POST["fecha_nacimiento"]) > time()) {
+            ?>
+            <div id="mensaje" class="alert alert-danger cess alert-dismissible fade show" role="alert" style="width: 50%; height: 50%; text-align: center; margin: auto; padding-top: 10%; font-size: 23px;">
+                <strong>Modificación Errónea!</strong> ¡La fecha insertada supera la fecha actual!
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" onclick="redirectToIndex();"></button>
             </div>
-        <?php
-        } else {
-        ?>
-            <div class="alert alert-danger  cess alert-dismissible fade show" role="alert">
-                <strong>Modificación Erronea!</strong>Se ha producido un error a la hora de modificar el usuario!
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-    <?php
+            <?php
+            echo '<script>
+                setTimeout(function() {
+                    document.getElementById("mensaje").style.display = "none"; // Oculta el mensaje después de 3 segundos
+                    redirectToIndex(); // Redirecciona a otra página
+                }, 3000); // Tiempo en milisegundos
+                
+                function redirectToIndex() {
+                    window.location.href = "index.php";
+                }
+            </script>';
+            exit;
+        
+        }else{
+            $id2 = $_POST["id"];
+
+            $sql2 = "SELECT * FROM usuarios where id=$id2";
+            $resultado2 = $conexion->query($sql2);
+
+            $usuario2 = $_POST["usuario"];
+            $nombre2 = $_POST["nombre"];
+            $apellido12 = $_POST["primer_apellido"];
+            $apellido22 = $_POST["segundo_apellido"];
+            $fechaNacimiento2 = $_POST["fecha_nacimiento"];
+
+            $sql3 = "UPDATE usuarios SET  usuario = '$usuario2', 
+                                        nombre = '$nombre2',
+                                        primer_apellido = '$apellido12',
+                                        segundo_apellido = '$apellido22',
+                                        fecha_nacimiento = '$fechaNacimiento2'
+                                    WHERE id = '$id2'";
+
+            if ($conexion->query($sql3) == "TRUE") {
+                $usuario = $_POST["usuario"];
+                $nombre = $_POST["nombre"];
+                $apellido1 = $_POST["primer_apellido"];
+                $apellido2 = $_POST["segundo_apellido"];
+                $fechaNacimiento = $_POST["fecha_nacimiento"];
+            ?>
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    <strong>Usuario Modificado!</strong> El usuario ha sido modificada con éxito!.
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            <?php
+            }
         }
     }
 
@@ -101,6 +115,9 @@
 
             <div class="collapse col-8" id="form">
                 <form action="" method="POST" enctype="multipart/form-data">
+                    <label class="form-label">Rol</label>
+                    <input type="text" class="form-control" name="rol" value="<?php echo$rol ?>">
+                    <br>    
                     <label class="form-label">Usuario</label>
                     <input type="text" class="form-control" name="usuario" value="<?php echo$usuario ?>">
                     <br>
