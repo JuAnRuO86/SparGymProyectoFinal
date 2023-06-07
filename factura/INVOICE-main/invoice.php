@@ -1,4 +1,4 @@
-<?php
+							<?php
 
 	# Incluyendo librerias necesarias #
 	require "./code128.php";

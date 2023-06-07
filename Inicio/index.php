@@ -1,7 +1,6 @@
 <?php require '../resources/header.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,9 +10,7 @@
     <link rel="stylesheet" href="../resources/bootstrap.min.css">
     <link rel="stylesheet" href="inicio.css">
 </head>
-
 <body>
-    
     <hr><div>
         <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false" style="display: flex; justify-content: center; min-height: 55vh;">
             <div class="carousel-indicators">
@@ -38,7 +35,6 @@
             </button>
         </div>
     </div>
-
     <div class="container ">
         <div class="row mt-5 mx-auto justify-content-center">
             <div class="col-8">
@@ -50,7 +46,6 @@
         <?php
         //cogemos el rol del sesion que esta en el header que lometemeos con un require
         $rol = $_SESSION["rol"];
-
         if ($rol == "administrador") {
         ?>
             <div class="row mt-5 pb-5">
@@ -96,7 +91,6 @@
                         </div>
                     </div>
                 </div>
-                
             </div>
             <?php } ?>
             <div class="row mt-5 pb-5">
@@ -127,12 +121,7 @@
                     </div>
                 </div>
             </div>
-
-
-
     </div>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>

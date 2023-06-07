@@ -3,15 +3,7 @@ require '../resources/util/databases.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	$usuario = $_POST["usuario"];
-// 	$producto = $_POST["producto"];
-// 	// $precio = int($_POST["precio"]);
-// 	// $cantidad = int($_POST["cantidad"]);
-// 	$precio_unitario = intval($_POST["precio_unitario"]);
-// 	$cantidad = intval($_POST["cantidad"]);
-// 	$fecha = $_POST["fecha"];
- }
-
-
+}
 
 # Incluyendo librerias necesarias #
 require "./code128.php";
