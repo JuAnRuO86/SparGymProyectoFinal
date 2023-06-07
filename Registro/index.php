@@ -28,15 +28,20 @@
                     header("location: ../index.php");
                     exit;
                 } else {
-                    echo "<p>Error al insertar</p>";
+                    ?>
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    Error al insertar
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                <?php
                 }
             } else {
                 ?>
                 <div class="alert alert-success alert-dismissible fade show" role="alert">
-                ¡No coinciden las contraseñas!
+                No coinciden las contraseñas
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>
-                <?php
+            <?php
             }
         }
     }
