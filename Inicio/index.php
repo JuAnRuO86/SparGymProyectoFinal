@@ -22,7 +22,7 @@
                     <img src="../resources/img/LogoSP.png" class="d-block w-100" alt="...">
                 </div>
                 <div class="carousel-item">
-                    <img src="../resources/img/corredorcinta.jpg" class="d-block w-100" alt="...">
+                    <img src="../resources/img/espartanosinicio2.jpg" class="d-block w-100" alt="...">
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
