@@ -31,7 +31,12 @@
                     echo "<p>Error al insertar</p>";
                 }
             } else {
-                echo "<p>No coinciden las contraseñas</p>";
+                ?>
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                ¡No coinciden las contraseñas!
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                <?php
             }
         }
     }
